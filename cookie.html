@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cooki</title>
+    <style>
+        #input{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+     <input type="button" id="bt1" value="createcookie" onclick="createcookie()" style="background-color: chartreuse;">
+     <input type="button" id="bt2" value="readcookie" onclick="readcookie()" style="background-color: fuchsia;">
+     <input type="button" id="bt3" value="deletecookie" onclick="deletecookie()" style="background-color: rgb(183, 255, 0);">
+    <script>
+        function createcookie(){
+            // persistent cookie
+            alert("cookie is created!!!!!!!!!!!!!");
+            document.cookie="user=scott";
+           // in memory cookie
+           d=new Date();
+           d.setMonth(d.getMonth()+1);
+           document.cookie="um=jhon;expires="+d.toUTCString(); 
+        }
+        function readcookie(){
+            r=document.cookie;
+            c=r.split(";");
+            for(i=0;i<c.length;i++){
+                console.log(c[i].split("=")[0]);
+                console.log(c[i].split("=")[1]);
+            }
+        }
+        function deletecookie(){
+
+        }
+
+    </script>
+
+
+    </body>
+</html>

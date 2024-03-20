@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="bt1" value="click" style="background-color: rgb(101, 27, 220);">
+<script type="text/javascript" lang="javascript">
+    let a=document.getElementById("bt1");
+    //   a.addEventListener('click',first);
+    a.onclick=first;
+    // function d(){
+    //     alert("hey you don't click......");
+    // }
+    function first(){
+        // document.body.style.backgroundColor="pink";
+        let change='123456789ABCDEF';
+        let v='#';
+        for(var i=0;i<6;i++){
+           var s=Math.floor(Math.random()*17);
+           v=v+change[s];
+           console.log(v)
+        }
+        // document.body.style.backgroundColor=v;
+        a.style.backgroundColor=v;
+
+    }
+</script>
+    
+</body>
+
+</html>

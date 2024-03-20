@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evnt</title>
+</head>
+
+<body>
+    Enter your Name:<input  type="text" id ="tx1" class="txt" style="background-color: rgb(101, 27, 220)">
+    <script type="text/javascript" lang="javascript">
+        // var a = document.getElementById("tx1").value='';
+        var a=document.getElementById("tx1");
+        console.log(document.title);
+        // window.print();
+        a.onkeyup=d;
+        function d(evnt) {
+            if(evnt.key=='a'){
+            console.log(evnt);
+                alert('hey a is not allowed');
+            }
+            else{
+                a.style.backgroundColor="yellow"
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
